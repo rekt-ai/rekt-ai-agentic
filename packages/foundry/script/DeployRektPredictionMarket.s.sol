@@ -2,7 +2,7 @@
 pragma solidity ^0.8.19;
 
 import "./DeployHelpers.s.sol";
-import "../contracts/YourContract.sol";
+import "../contracts/RektPredictionMarket.sol";
 
 /**
  * @notice Deploy script for YourContract contract
@@ -14,7 +14,7 @@ import "../contracts/YourContract.sol";
  * yarn deploy --file DeployYourContract.s.sol  # local anvil chain
  * yarn deploy --file DeployYourContract.s.sol --network optimism # live network (requires keystore)
  */
-contract DeployYourContract is ScaffoldETHDeploy {
+contract DeployRektPredictionMarket is ScaffoldETHDeploy {
     /**
      * @dev Deployer setup based on `ETH_KEYSTORE_ACCOUNT` in `.env`:
      *      - "scaffold-eth-default": Uses Anvil's account #9 (0xa0Ee7A142d267C1f36714E4a8F75612F20a79720), no password prompt
@@ -25,6 +25,6 @@ contract DeployYourContract is ScaffoldETHDeploy {
      *      - Export contract addresses & ABIs to `nextjs` packages
      */
     function run() external ScaffoldEthDeployerRunner {
-        new YourContract(deployer);
+        new RektPredictionMarket(deployer);
     }
 }
