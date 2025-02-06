@@ -29,16 +29,17 @@ jobs:
 
       - name: Install dependencies
         run: yarn install --immutable
-      
+
       - name: Install foundry-toolchain
         uses: foundry-rs/foundry-toolchain@v1
         with:
           version: nightly
 
-      - name: Setup Foundry keystore
+      - name: Install Forge dependencies
+        working-directory: ./packages/foundry
         run: |
-          mkdir -p ~/.foundry/keystores/
-          cast wallet import --private-key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80 --unsafe-password 'localhost' scaffold-eth-default
+          rm -rf lib/openzeppelin-contracts
+          forge install OpenZeppelin/openzeppelin-contracts --no-commit
 
       - name: Run foundry node and deploy
         env:
@@ -46,8 +47,8 @@ jobs:
         run: |
           yarn chain &
           sleep 10
-          yarn deploy || true  # Tambahkan || true untuk mencegah job gagal karena error deploy
-          pkill -f anvil  # Kill anvil process setelah selesai
+          yarn deploy --network localhost
+          pkill -f anvil
 
       - name: Run nextjs lint
         run: yarn next:lint --max-warnings=0
