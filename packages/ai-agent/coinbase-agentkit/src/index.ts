@@ -17,12 +17,17 @@ app.get("/run/:mode", async (req, res) => {
 	validateEnvironment();
 	try {
 		const { agent, config } = await initializeAgent();
-		const mode = req.params.mode;
+		let mode = req.params.mode;
 
-		if (mode === "chat") {
-			await runChatMode(agent, config);
-		} else {
-			await runAutonomousMode(agent, config);
+		while (true) {
+			if (mode === "chat") {
+				await runChatMode(agent, config);
+				// Restart if 'exit' is received in chat mode
+				mode = req.params.mode;
+			} else if (mode === "auto") {
+				await runAutonomousMode(agent, config);
+				// Autonomous mode keeps running indefinitely
+			}
 		}
 		res.send("Agent executed successfully.");
 	} catch (error) {
@@ -33,6 +38,13 @@ app.get("/run/:mode", async (req, res) => {
 			res.status(500).send("Unknown error occurred.");
 		}
 	}
+});
+
+// API endpoint to trigger nodemon restart
+app.get("/restart", (req, res) => {
+	// This will cause nodemon to restart the app
+	console.log("Restarting the app...");
+	process.exit(0); // Exit the process, causing nodemon to restart
 });
 
 app.listen(port, () => {
