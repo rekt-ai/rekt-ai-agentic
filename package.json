@@ -2,12 +2,9 @@
 	"name": "se-2",
 	"version": "0.0.1",
 	"private": true,
-	"workspaces": {
-		"workspaces": [
-			"packages/*",
-			"packages/ai-agent/*"
-		]
-	},
+	"workspaces": [
+		"packages/*"
+	],
 	"scripts": {
 		"account": "yarn foundry:account",
 		"account:generate": "yarn foundry:generate",
