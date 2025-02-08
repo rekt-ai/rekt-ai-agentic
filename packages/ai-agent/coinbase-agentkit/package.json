@@ -1,36 +1,38 @@
 {
-	"name": "coinbase-agentkit",
-	"type": "module",
-	"version": "0.1.0",
-	"private": true,
-	"packageManager": "yarn@3.2.3",
-	"dependencies": {
-		"@coinbase/agentkit": "^0.1.1",
-		"@coinbase/agentkit-langchain": "^0.1.0",
-		"@langchain/core": "^0.3.38",
-		"@langchain/langgraph": "^0.2.45",
-		"@langchain/openai": "^0.4.2",
-		"express": "^4.21.2",
-		"viem": "^2.22.23",
-		"zod": "^3.22.4"
-	},
-	"devDependencies": {
-		"@types/express": "^4",
-		"@types/node": "^22.13.1",
-		"nodemon": "^3.1.9",
-		"ts-node": "^10.9.2",
-		"tsx": "^4.19.2",
-		"typescript": "^5.7.3"
-	},
-	"scripts": {
-		"start": "tsx ./src/index.ts",
-		"dev": "nodemon ./src/index.ts",
-		"lint": "eslint -c .eslintrc.json *.ts",
-		"lint:fix": "eslint -c .eslintrc.json *.ts --fix",
-		"format": "prettier --write \"**/*.{ts,js,cjs,json,md}\"",
-		"format:check": "prettier -c .prettierrc --check \"**/*.{ts,js,cjs,json,md}\""
-	},
-	"engines": {
-		"node": ">=18.18.0"
-	}
+  "name": "coinbase-agentkit",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "yarn@3.2.3",
+  "dependencies": {
+    "@coinbase/agentkit": "latest",
+    "@coinbase/agentkit-langchain": "latest",
+    "@langchain/core": "^0.3.38",
+    "@langchain/langgraph": "^0.2.45",
+    "@langchain/openai": "^0.4.2",
+    "axios": "^1.7.9",
+    "express": "^4.21.2",
+    "technicalindicators": "^3.1.0",
+    "viem": "^2.22.23",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4",
+    "@types/node": "^22.13.1",
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  },
+  "scripts": {
+    "start": "tsx ./src/index.ts",
+    "dev": "nodemon ./src/index.ts",
+    "lint": "eslint -c .eslintrc.json *.ts",
+    "lint:fix": "eslint -c .eslintrc.json *.ts --fix",
+    "format": "prettier --write \"**/*.{ts,js,cjs,json,md}\"",
+    "format:check": "prettier -c .prettierrc --check \"**/*.{ts,js,cjs,json,md}\""
+  },
+  "engines": {
+    "node": ">=18.18.0"
+  }
 }
