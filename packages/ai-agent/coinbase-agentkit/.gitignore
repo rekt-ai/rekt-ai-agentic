@@ -23,3 +23,9 @@ node_modules
 dist
 
 .env
+
+wallet_data.txt
+
+yarn.lock
+
+package-lock.json
