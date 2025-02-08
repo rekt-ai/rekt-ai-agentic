@@ -15,6 +15,9 @@ node_modules
 # misc
 .DS_Store
 
+# Wallet data
+wallet_data.txt
+
 # IDE
 .vscode
 .idea
