@@ -5,17 +5,10 @@ __metadata:
   version: 6
   cacheKey: 8
 
-"@adraffy/ens-normalize@npm:1.10.1":
+"@adraffy/ens-normalize@npm:1.10.1, @adraffy/ens-normalize@npm:^1.10.1":
   version: 1.10.1
   resolution: "@adraffy/ens-normalize@npm:1.10.1"
   checksum: 0836f394ea256972ec19a0b5e78cb7f5bcdfd48d8a32c7478afc94dd53ae44c04d1aa2303d7f3077b4f3ac2323b1f557ab9188e8059978748fdcd83e04a80dcc
-  languageName: node
-  linkType: hard
-
-"@adraffy/ens-normalize@npm:^1.10.1":
-  version: 1.11.0
-  resolution: "@adraffy/ens-normalize@npm:1.11.0"
-  checksum: b2911269e3e0ec6396a2e5433a99e0e1f9726befc6c167994448cd0e53dbdd0be22b4835b4f619558b568ed9aa7312426b8fa6557a13999463489daa88169ee5
   languageName: node
   linkType: hard
 
@@ -26,7 +19,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@coinbase/agentkit-langchain@npm:^0.1.0":
+"@coinbase/agentkit-langchain@latest":
   version: 0.1.0
   resolution: "@coinbase/agentkit-langchain@npm:0.1.0"
   dependencies:
@@ -40,9 +33,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@coinbase/agentkit@npm:^0.1.0, @coinbase/agentkit@npm:^0.1.1":
-  version: 0.1.1
-  resolution: "@coinbase/agentkit@npm:0.1.1"
+"@coinbase/agentkit@latest, @coinbase/agentkit@npm:^0.1.0":
+  version: 0.1.2
+  resolution: "@coinbase/agentkit@npm:0.1.2"
   dependencies:
     "@coinbase/coinbase-sdk": ^0.17.0
     md5: ^2.3.0
@@ -50,7 +43,7 @@ __metadata:
     twitter-api-v2: ^1.18.2
     viem: ^2.22.16
     zod: ^3.23.8
-  checksum: 2ff2aefde769962a7c3d83a65a32eb05327794813dbe8f5e95d5c09b878f93b0574625d8ad04fc21c6db5ccc799580d73ec10bff64e7ac4a4721a2f9e8f01688
+  checksum: 67698f3d67da301bd7692cfb4e715137120de84afb6164a39a33956b14682a46b52c5ad804d1ce91f52f86d3fe3ef5b48d794494de9a117421385aa1ae77597d
   languageName: node
   linkType: hard
 
@@ -321,8 +314,8 @@ __metadata:
   linkType: hard
 
 "@langchain/core@npm:^0.3.19, @langchain/core@npm:^0.3.38":
-  version: 0.3.38
-  resolution: "@langchain/core@npm:0.3.38"
+  version: 0.3.39
+  resolution: "@langchain/core@npm:0.3.39"
   dependencies:
     "@cfworker/json-schema": ^4.0.2
     ansi-styles: ^5.0.0
@@ -336,7 +329,7 @@ __metadata:
     uuid: ^10.0.0
     zod: ^3.22.4
     zod-to-json-schema: ^3.22.3
-  checksum: c212355f7306af2f0380c7d91ea5899171dbdd5dde77588a9be7cf65626deb341602b4e8fa66e42158eb8de0f4b651219b5ec94a2edcdc2bbd56be798e207385
+  checksum: 0daf2cd6ac4b89d7e2f2662eed9a6ff4a5bbe254e3c3b98440815170621a53524dce71e9a7a6da07e83df41d3249d617bb53a837e57047036694a271f1ded84a
   languageName: node
   linkType: hard
 
@@ -352,14 +345,14 @@ __metadata:
   linkType: hard
 
 "@langchain/langgraph-sdk@npm:~0.0.32":
-  version: 0.0.36
-  resolution: "@langchain/langgraph-sdk@npm:0.0.36"
+  version: 0.0.37
+  resolution: "@langchain/langgraph-sdk@npm:0.0.37"
   dependencies:
     "@types/json-schema": ^7.0.15
     p-queue: ^6.6.2
     p-retry: 4
     uuid: ^9.0.0
-  checksum: 7e14529ad7190681ac53c18f7e46b9854c4185c5cac30fec711eb3149d146e1f4fdb141d454793262a7e0e2cb5970b91f3ebec4b904bfb9cb32b3862cfd775ec
+  checksum: 9924342294790d2e0f318d4d2ec9f5ae28f2008b0f6719f867704929b8cddcfaf5c86a74d155e15425c9ca077d42da467a69334a87a2506e71afbc37cdf22a26
   languageName: node
   linkType: hard
 
@@ -378,16 +371,16 @@ __metadata:
   linkType: hard
 
 "@langchain/openai@npm:^0.4.2":
-  version: 0.4.2
-  resolution: "@langchain/openai@npm:0.4.2"
+  version: 0.4.3
+  resolution: "@langchain/openai@npm:0.4.3"
   dependencies:
     js-tiktoken: ^1.0.12
     openai: ^4.77.0
     zod: ^3.22.4
     zod-to-json-schema: ^3.22.3
   peerDependencies:
-    "@langchain/core": ">=0.3.29 <0.4.0"
-  checksum: bc5b383a6d07fec1ef253ee48123bf0ee2069c86bf053faeba647dde24acc298efa6c38c6e8f725a662092418343835da549b47e17c7666df5e39677929ea86b
+    "@langchain/core": ">=0.3.39 <0.4.0"
+  checksum: 2ce03e4c7e6079e5cecf6b71db32973dbde53431667775de42cec0c7c07a8a788c87c33923e03807e338d9774807f47f7d9903fe9458c4eca134fc2b663b4823
   languageName: node
   linkType: hard
 
@@ -606,6 +599,13 @@ __metadata:
   dependencies:
     undici-types: ~5.26.4
   checksum: 8f780a51a2dc1d597b104a2c33a2ab175fda492defbaab2cbb5fd098124d867ebed7cda0eaf80309bba25fbd4e41b4a04c91b7f14b50547b4377a39ccf749a7c
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^6.0.96":
+  version: 6.14.13
+  resolution: "@types/node@npm:6.14.13"
+  checksum: ca66aed296f33661f338c11812e3f87b4556da361beaabd26c86663e30bbaff71693296a36cc61875dfe3b83b8d8b50822613eb7572957d9165c809a54564dbd
   languageName: node
   linkType: hard
 
@@ -831,7 +831,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:^1.6.8":
+"axios@npm:^1.6.8, axios@npm:^1.7.9":
   version: 1.7.9
   resolution: "axios@npm:1.7.9"
   dependencies:
@@ -1103,20 +1103,22 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "coinbase-agentkit@workspace:."
   dependencies:
-    "@coinbase/agentkit": ^0.1.1
-    "@coinbase/agentkit-langchain": ^0.1.0
+    "@coinbase/agentkit": latest
+    "@coinbase/agentkit-langchain": latest
     "@langchain/core": ^0.3.38
     "@langchain/langgraph": ^0.2.45
     "@langchain/openai": ^0.4.2
     "@types/express": ^4
     "@types/node": ^22.13.1
+    axios: ^1.7.9
     express: ^4.21.2
     nodemon: ^3.1.9
+    technicalindicators: ^3.1.0
     ts-node: ^10.9.2
     tsx: ^4.19.2
     typescript: ^5.7.3
     viem: ^2.22.23
-    zod: ^3.22.4
+    zod: ^3.24.1
   languageName: unknown
   linkType: soft
 
@@ -2349,14 +2351,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ms@npm:2.0.0":
+"ms@npm:2.0.0, ms@npm:^2.0.0":
   version: 2.0.0
   resolution: "ms@npm:2.0.0"
   checksum: 0e6a22b8b746d2e0b65a430519934fefd41b6db0682e3477c10f60c76e947c4c0ad06f63ffdf1d78d335f83edee8c0aa928aa66a36c7cd95b69b26f468d527f4
   languageName: node
   linkType: hard
 
-"ms@npm:2.1.3, ms@npm:^2.0.0, ms@npm:^2.1.3":
+"ms@npm:2.1.3, ms@npm:^2.1.3":
   version: 2.1.3
   resolution: "ms@npm:2.1.3"
   checksum: aa92de608021b242401676e35cfa5aa42dd70cbdc082b916da7fb925c542173e36bce97ea3e804923fe92c0ad991434e4a38327e15a1b5b5f945d66df615ae6d
@@ -3116,6 +3118,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"technicalindicators@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "technicalindicators@npm:3.1.0"
+  dependencies:
+    "@types/node": ^6.0.96
+  checksum: 680b3540d5b269f5fc70a3ba4f15eabda0f710d5e99101ea8efc97cddcb74ab74652e59c9e36a2d547a7a37c3979b6786490f643d91bacd5d3cd164bcd349b49
+  languageName: node
+  linkType: hard
+
 "to-regex-range@npm:^5.0.1":
   version: 5.0.1
   resolution: "to-regex-range@npm:5.0.1"
@@ -3510,7 +3521,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zod@npm:^3.22.4, zod@npm:^3.23.8":
+"zod@npm:^3.22.4, zod@npm:^3.23.8, zod@npm:^3.24.1":
   version: 3.24.1
   resolution: "zod@npm:3.24.1"
   checksum: dcd5334725b29555593c186fd6505878bb7ccb4f5954f728d2de24bf71f9397492d83bdb69d5b8a376eb500a02273ae0691b57deb1eb8718df3f64c77cc5534a
