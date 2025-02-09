@@ -1,80 +1,144 @@
-# 🏗 Scaffold-ETH 2
+# REKT-AI (Risk Evaluation Knockout Tournament - AI)
 
-<h4 align="center">
-  <a href="https://docs.scaffoldeth.io">Documentation</a> |
-  <a href="https://scaffoldeth.io">Website</a>
-</h4>
+## **Overview**
 
-🧪 An open-source, up-to-date toolkit for building decentralized applications (dapps) on the Ethereum blockchain. It's designed to make it easier for developers to create and deploy smart contracts and build user interfaces that interact with those contracts.
+REKT-AI is an AI Agent Prediction Market where users and AI compete to make the most accurate market predictions and win a prize pool. Instead of simply guessing prices, users provide a prompt based on their chosen prediction method, making the process more strategic and interactive. AI also participates in these challenges, competing directly with users and learning from their strategies.
 
-⚙️ Built using NextJS, RainbowKit, Foundry, Wagmi, Viem, and Typescript.
+---
 
-- ✅ **Contract Hot Reload**: Your frontend auto-adapts to your smart contract as you edit it.
-- 🪝 **[Custom hooks](https://docs.scaffoldeth.io/hooks/)**: Collection of React hooks wrapper around [wagmi](https://wagmi.sh/) to simplify interactions with smart contracts with typescript autocompletion.
-- 🧱 [**Components**](https://docs.scaffoldeth.io/components/): Collection of common web3 components to quickly build your frontend.
-- 🔥 **Burner Wallet & Local Faucet**: Quickly test your application with a burner wallet and local faucet.
-- 🔐 **Integration with Wallet Providers**: Connect to different wallet providers and interact with the Ethereum network.
+## **Problem Statement**
 
-![Debug Contracts tab](https://github.com/scaffold-eth/scaffold-eth-2/assets/55535804/b237af0c-5027-4849-a5c1-2e31495cccb1)
+1. **Inefficient AI Training for Trading**
+   - Most AI trading models rely on backtesting and static data rather than real-world, dynamic human strategies.
+2. **Lack of Incentives for AI Training Contribution**
+   - Users have no motivation to contribute their trading insights to improve AI models.
+3. **Limited Engagement in Prediction Markets**
+   - Current prediction markets often lack gamification and direct competition, making them less engaging.
+4. **AI as a Passive Tool Instead of an Active Competitor**
+   - AI is mostly used as a decision-making assistant rather than an entity that competes and learns dynamically from users.
 
-## Requirements
+---
 
-Before you begin, you need to install the following tools:
+## **Solution**
 
-- [Node (>= v18.18)](https://nodejs.org/en/download/)
-- Yarn ([v1](https://classic.yarnpkg.com/en/docs/install/) or [v2+](https://yarnpkg.com/getting-started/install))
-- [Git](https://git-scm.com/downloads)
+### **1. AI as a Competitor in Prediction Battles**
 
-## Quickstart
+- Users and AI enter a **battle royale-style competition**, making predictions for future asset prices.
+- The AI continuously learns from user-generated prompts and adapts its strategies.
+- The AI is **rewarded or penalized based on accuracy**, ensuring real-time evolution.
 
-To get started with Scaffold-ETH 2, follow the steps below:
+### **2. Gamification with Knockout Tournaments**
 
-1. Install dependencies if it was skipped in CLI:
+- **Group Royale**: Multiple users competing against AI and each other.
+- Incentivized users with **prizes for predictions**.
+- Prize pools are distributed based on performance.
 
-```
-cd my-dapp-example
-yarn install
-```
+### **3. Train-to-Earn Model**
 
-2. Run a local network in the first terminal:
+- Users who contribute valuable prediction prompts and strategies receive **rewards**.
+- The AI model **incorporates winning strategies**, making future predictions more robust.
+- Winning users get **more influence over AI’s learning process**.
 
-```
-yarn chain
-```
+### **4. AI as a Trading System End-Goal**
 
-This command starts a local Ethereum network using Foundry. The network runs on your local machine and can be used for testing and development. You can customize the network configuration in `packages/foundry/foundry.toml`.
+- Once trained, the AI can be deployed for **real-world trading strategies**.
+- The community-built AI can potentially become a **decentralized trading fund**.
 
-3. On a second terminal, deploy the test contract:
+---
 
-```
-yarn deploy
-```
+## **How It Works**
 
-This command deploys a test smart contract to the local network. The contract is located in `packages/foundry/contracts` and can be modified to suit your needs. The `yarn deploy` command uses the deploy script located in `packages/foundry/script` to deploy the contract to the network. You can also customize the deploy script.
+1. **User Enters a Tournament**
 
-4. On a third terminal, start your NextJS app:
+   - Users join a prediction tournament by submitting a **prompt-based prediction method** (e.g., technical analysis, on-chain signals, sentiment analysis).
 
-```
-yarn start
-```
+2. **AI Participates**
 
-Visit your app on: `http://localhost:3000`. You can interact with your smart contract using the `Debug Contracts` page. You can tweak the app config in `packages/nextjs/scaffold.config.ts`.
+   - AI generates its own predictions using their method.
 
-Run smart contract test with `yarn foundry:test`
+3. **Predictions Are Locked**
 
-- Edit your smart contracts in `packages/foundry/contracts`
-- Edit your frontend homepage at `packages/nextjs/app/page.tsx`. For guidance on [routing](https://nextjs.org/docs/app/building-your-application/routing/defining-routes) and configuring [pages/layouts](https://nextjs.org/docs/app/building-your-application/routing/pages-and-layouts) checkout the Next.js documentation.
-- Edit your deployment scripts in `packages/foundry/script`
+   - After a set period, all predictions are finalized and cannot be changed.
+
+4. **Outcome Determination**
+
+   - The real market price is revealed after the prediction timeframe (e.g., 3 days for BTC price prediction).
+   - The incentivized user with the closest prediction **wins**.
+
+5. **Reward Distribution**
+
+   - If a **user wins**, they receive rewards + influence over the AI’s learning process.
+   - If **AI wins**, the prize pool funds further AI improvements.
+
+---
+
+## **Key Features**
+
+### **1. Battle Royale Prediction Market**
+
+- Competitive elimination rounds, increasing engagement and excitement.
+- Group-based predictions enhance social and strategic elements.
+- Gamification for prediction ensures higher engagement.
+
+### **2. AI That Learns from Users in Real-Time**
+
+- The AI isn’t just a tool—it **competes and evolves** based on human insights.
+- Users shape its intelligence through competition.
+- Community-driven AI improvement creates a **decentralized intelligence model**.
+
+### **3. Train-to-Earn Incentives**
+
+- Users are **rewarded** for improving AI’s performance.
+- Contributions to AI training are **monetized**.
+- Prediction gamification keeps users engaged.
+
+### **4. Future Expansion into AI-Based Trading**
+
+- The AI developed through REKT-AI could be deployed for **real-world DeFi trading**, creating an **autonomous AI trading system**.
+
+---
+
+## **Tech Stack**
+
+- **CDP (Coinbase Development Platform) with AgentKit**
+
+  - Enables AI agents to connect to LangChain for natural language processing and strategic decision-making.
+  - The AI agent can interact with deployed smart contracts (both read and write operations).
+  - AI performs prediction analysis using Binance API and queries contract data via The Graph.
+
+- **The Graph**
+
+  - Used to query smart contract data via subgraphs.
+  - Enables efficient indexing and retrieval of blockchain data for AI decision-making.
+
+- **Binance API**
+
+  - Used for forecasting asset prices based on a deadline determined by the user or AI when creating a market.
+  - Provides real-time market data for AI analysis and prediction accuracy.
+
+- **PostgreSQL**
+
+  - Stores user-submitted prediction methods used to train the AI.
+  - If the AI loses, it consumes the winning user’s analysis to enhance its forecasting capabilities.
+
+- **Autonome**
+
+  - A platform used to deploy AI agents.
+  - Provides a framework where anyone can deploy their own AI agent with built-in support for market creation.
+  - Ensures AI agents operate autonomously, handling contract interactions and market-making independently.
+  - Provides a deployment framework for those who have their own AI agent framework, enabling seamless integration.
+
+---
+
+## **Links**
+
+---
 
 
-## Documentation
+## **Reference**
 
-Visit our [docs](https://docs.scaffoldeth.io) to learn how to start building with Scaffold-ETH 2.
+- [OnlyDate AI Agents](https://www.onlydate.fun/agents)
+- [The Graph Documentation](https://thegraph.com/docs)
+- [Coinbase AgentKit Quickstart](https://docs.cdp.coinbase.com/agentkit/docs/quickstart)
+- [Autonome Developer Docs](https://dev.autonome.fun/)
 
-To know more about its features, check out our [website](https://scaffoldeth.io).
-
-## Contributing to Scaffold-ETH 2
-
-We welcome contributions to Scaffold-ETH 2!
-
-Please see [CONTRIBUTING.MD](https://github.com/scaffold-eth/scaffold-eth-2/blob/main/CONTRIBUTING.md) for more information and guidelines for contributing to Scaffold-ETH 2.
